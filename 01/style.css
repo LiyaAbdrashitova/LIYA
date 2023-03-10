@@ -1,0 +1,205 @@
+.sides {
+  display: grid;
+  grid-area: sides;
+  grid-template-areas:
+    "header header header"
+    "manage-projects manage-projects manage-projects"
+    "partners partners partners"
+    "tailor-made tailor-made tailor-made"
+    "real-stories real-stories real-stories"
+    "achievements achievements achievements"
+    "easy-integrations easy-integrations easy-integrations"
+    "manage-from-mobile manage-from-mobile manage-from-mobile"
+    "footer footer footer";
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(233, 159, 68);
+}
+
+header {
+  display: flex;
+  background-color: antiquewhite;
+  padding: inherit;
+  justify-content: space-between;
+}
+hr {
+  margin: -20px;
+  width: 70%;
+  align-self: center;
+}
+.manage-projects {
+  background: url(BG.png) no-repeat;
+  padding: inherit;
+  height: 400px;
+  /*не круто*/
+  display: flex;
+  flex-direction: row;
+  background-color: antiquewhite;
+}
+.info {
+  width: 50%;
+}
+.phone img {
+  height: 350px;
+}
+.screen,
+.iphone {
+  position: absolute;
+}
+.partners {
+  display: flex;
+  flex-direction: row;
+  grid-row-gap: 30px;
+  padding: inherit;
+  justify-content: space-between;
+  background-color: antiquewhite;
+}
+
+.air {
+  grid-area: air;
+}
+.hub {
+  grid-area: hub;
+}
+.gg {
+  grid-area: gg;
+}
+.mic {
+  grid-area: mic;
+}
+.wm {
+  grid-area: fe;
+}
+
+.tailor-made {
+  grid-area: tailor-made;
+  display: grid;
+  grid-template-areas:
+    "introduction introduction introduction"
+    "robust-workflow flexibility user-friendly"
+    "multiple-layouts better-components well-organised";
+  padding: inherit;
+  grid-row-gap: 30px;
+  background-color: antiquewhite;
+}
+.introduction {
+  grid-area: introduction;
+}
+.robust-workflow {
+  grid-area: robust-workflow;
+}
+.flexibility {
+  grid-area: flexibility;
+}
+.user-friendly {
+  grid-area: user-friendly;
+}
+.multiple-layouts {
+  grid-area: multiple-layouts;
+}
+.better-components {
+  grid-area: better-components;
+}
+.well-organised {
+  grid-area: well-organised;
+}
+
+.real-stories {
+  grid-area: real-stories;
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "left right";
+  padding: inherit;
+  background-color: antiquewhite;
+}
+.left {
+  grid-area: left;
+}
+.right {
+  grid-area: right;
+}
+.achievements {
+  grid-area: achievements;
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "heading downloads users"
+    "heading clients countries";
+  padding: inherit;
+  background-color: antiquewhite;
+}
+.achievements .heading {
+  grid-area: heading;
+}
+.downloads {
+  grid-area: downloads;
+}
+.clients {
+  grid-area: clients;
+}
+.users {
+  grid-area: users;
+}
+.countries {
+  grid-area: countries;
+}
+.easy-integrations {
+  grid-area: easy-integrations;
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "heading icon";
+  padding: inherit;
+  background-color: antiquewhite;
+}
+.easy-integrations .heading {
+  grid-area: heading;
+}
+.icon {
+  grid-area: icon;
+}
+.manage-from-mobile {
+  grid-area: manage-from-mobile;
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "heading phones"
+    "get phones";
+  padding: inherit;
+  background-color: antiquewhite;
+}
+.manage-from-mobile .heading {
+  grid-area: heading;
+}
+.get {
+  grid-area: get;
+}
+.phones {
+  grid-area: phones;
+}
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-areas:
+    "icon-square get"
+    "links get"
+    "copyright get";
+  padding: inherit;
+  background-color: antiquewhite;
+}
+.icon-square {
+  grid-area: icon-square;
+}
+.links {
+  grid-area: links;
+}
+.get {
+  grid-area: get;
+}
+.copyright {
+  grid-area: copyright;
+}
