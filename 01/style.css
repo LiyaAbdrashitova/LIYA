@@ -1,81 +1,127 @@
+/*  
+@import url();*/
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.space {
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 .sides {
-  display: grid;
-  grid-area: sides;
-  grid-template-areas:
-    "header header header"
-    "manage-projects manage-projects manage-projects"
-    "partners partners partners"
-    "tailor-made tailor-made tailor-made"
-    "real-stories real-stories real-stories"
-    "achievements achievements achievements"
-    "easy-integrations easy-integrations easy-integrations"
-    "manage-from-mobile manage-from-mobile manage-from-mobile"
-    "footer footer footer";
   display: flex;
   flex-direction: column;
-  grid-row-gap: 30px;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: rgb(233, 159, 68);
 }
 
+/* HEADER */
 header {
   display: flex;
-  background-color: antiquewhite;
-  padding: inherit;
   justify-content: space-between;
+  gap: 10px;
 }
-hr {
-  margin: -20px;
-  width: 70%;
-  align-self: center;
-}
-.manage-projects {
-  background: url(BG.png) no-repeat;
-  padding: inherit;
-  height: 400px;
-  /*не круто*/
+.buttons {
   display: flex;
-  flex-direction: row;
-  background-color: antiquewhite;
+  gap: 12px;
+}
+nav {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.group {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.plusbg {
+  background: url("TopBackground.png") no-repeat;
+  background-size: 100%;
+  background-color: #ffffff;
+}
+#google {
+  background: url("GooglePlaylogo.svg") no-repeat 10px;
+  border-radius: 4px;
+  width: 140px;
+  height: 40px;
+  background-color: black;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 40px;
+  border: solid #d1d5db 0.5px;
+}
+#appstore {
+  color: #ffffff;
+  background: url("AppStorelogo.svg") no-repeat 17px;
+  border-radius: 8px;
+  border: #d1d5db solid 0.5px;
+  width: 140px;
+  height: 40px;
+  text-align: left;
+  padding-left: 40px;
+  background-color: black;
+}
+nav a {
+  color: black;
+  text-decoration: none;
+}
+#small {
+  font-size: xx-small;
+}
+#big {
+  font-size: medium;
+}
+/* THE EASIEST WAY */
+.manage-projects {
+  display: flex;
 }
 .info {
-  width: 50%;
+  margin-top: 50px;
+}
+.info h1 {
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -2.5%;
+}
+.info p {
+  font-size: 18px;
+  line-height: 28px;
+}
+.info .get-started {
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #7c3aed;
+  color: #ffffff;
+}
+.info .watch-video {
+  width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #7c3aed;
+  border-color: transparent;
+  background: url("iconwatch.svg") no-repeat 5px;
+  text-align: left;
+  padding-left: 30px;
 }
 .phone img {
-  height: 350px;
+  max-width: 300px;
 }
-.screen,
-.iphone {
-  position: absolute;
-}
+
+/* PARTNERS */
 .partners {
   display: flex;
   flex-direction: row;
-  grid-row-gap: 30px;
-  padding: inherit;
+  border-top: rgb(199, 199, 199) solid 1px;
+  border-bottom: rgb(199, 199, 199) solid 1px;
   justify-content: space-between;
-  background-color: antiquewhite;
 }
 
-.air {
-  grid-area: air;
-}
-.hub {
-  grid-area: hub;
-}
-.gg {
-  grid-area: gg;
-}
-.mic {
-  grid-area: mic;
-}
-.wm {
-  grid-area: fe;
-}
-
+/* TAILOR MADE */
 .tailor-made {
   grid-area: tailor-made;
   display: grid;
@@ -83,12 +129,39 @@ hr {
     "introduction introduction introduction"
     "robust-workflow flexibility user-friendly"
     "multiple-layouts better-components well-organised";
-  padding: inherit;
+
   grid-row-gap: 30px;
-  background-color: antiquewhite;
+  text-align: center;
 }
 .introduction {
   grid-area: introduction;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-top: 20px;
+}
+.tailor-made h3 {
+  font-size: 30px;
+  line-height: 40px;
+}
+.tailor-made p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.introduction h2 {
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -2.5%;
+}
+.introduction p {
+  font-size: 18px;
+  line-height: 28px;
+}
+.padd {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+.padd img {
+  height: 20px;
 }
 .robust-workflow {
   grid-area: robust-workflow;
@@ -108,21 +181,100 @@ hr {
 .well-organised {
   grid-area: well-organised;
 }
-
+/* REAL STORIES */
 .real-stories {
-  grid-area: real-stories;
   display: grid;
-  gap: 10px;
-  grid-template-areas: "left right";
-  padding: inherit;
-  background-color: antiquewhite;
+  grid-area: real-stories;
+  grid-template-areas:
+    "get-inspired ."
+    "get-inspired airbnb"
+    "hubspot airbnb"
+    "hubspot strapi"
+    ". strapi";
+  gap: 30px;
+  background-color: #d5fafc;
 }
-.left {
-  grid-area: left;
+.get-inspired h2 {
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -2.5%;
 }
-.right {
-  grid-area: right;
+.get-inspired p {
+  font-size: 18px;
+  line-height: 28px;
 }
+#hs,
+#ab,
+#strap p {
+  font-size: 18px;
+  line-height: 28px;
+}
+.real-stories p {
+  margin-top: 0px;
+}
+.real-stories span {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 20px;
+}
+.airbnb {
+  grid-area: airbnb;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 488px;
+}
+.hubspot {
+  grid-area: hubspot;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 200px;
+  max-width: 384px;
+}
+.hubspot img {
+  align-self: flex-start;
+}
+.airbnb #ab {
+  align-self: flex-start;
+}
+.text {
+  display: flex;
+  flex-direction: row;
+}
+#strap {
+  align-self: flex-start;
+}
+.strapi {
+  grid-area: strapi;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 384px;
+}
+.airbnb,
+.hubspot,
+.strapi {
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 30px;
+}
+#qot {
+  height: 10px;
+  padding-right: 5px;
+}
+#qq {
+  width: 90px;
+  height: 120px;
+  opacity: 0.5;
+  position: absolute;
+}
+.get-inspired {
+  grid-area: get-inspired;
+  transform: translateX(56px);
+  margin-top: 30px;
+}
+/* ACHIEVE */
 .achievements {
   grid-area: achievements;
   display: grid;
@@ -130,57 +282,174 @@ hr {
   grid-template-areas:
     "heading downloads users"
     "heading clients countries";
-  padding: inherit;
-  background-color: antiquewhite;
 }
 .achievements .heading {
   grid-area: heading;
+  align-self: center;
+}
+.achievements h2 {
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -2.5%;
+}
+.achievements .heading p {
+  font-size: 18px;
+  line-height: 28px;
+}
+.achievements img {
+  height: 25px;
 }
 .downloads {
   grid-area: downloads;
+  display: flex;
+  align-items: center;
+}
+.achievements h3 {
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: -2.5%;
+}
+.achievements .mini-text p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.achievements .mini-text {
+  margin-left: 20px;
+  line-height: 5px;
 }
 .clients {
   grid-area: clients;
+  display: flex;
+  align-items: center;
 }
 .users {
   grid-area: users;
+  display: flex;
+  align-items: center;
 }
 .countries {
   grid-area: countries;
+  display: flex;
+  align-items: center;
 }
+/* EASY */
 .easy-integrations {
   grid-area: easy-integrations;
   display: grid;
-  gap: 10px;
-  grid-template-areas: "heading icon";
-  padding: inherit;
-  background-color: antiquewhite;
+  grid-template-areas: "easy-170 icon";
+  border-top: rgb(214, 214, 214) solid 1px;
+  padding-top: 0px;
 }
-.easy-integrations .heading {
-  grid-area: heading;
+.easy-170 {
+  grid-area: easy-170;
+  align-self: center;
+}
+.easy-170 h2 {
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -2.5%;
+}
+.easy-170 p {
+  font-size: 18px;
+  line-height: 28px;
 }
 .icon {
-  grid-area: icon;
+  display: flex;
+  flex-direction: column;
+  background: url("bgicon.png") no-repeat;
+  background-size: 100%;
 }
+.icons-top {
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-around;
+}
+.icons-bottom {
+  display: flex;
+  padding-top: 40px;
+  justify-content: space-evenly;
+}
+.icon img {
+  height: 50px;
+}
+
+/* ДВА ТЕЛЕФОНА */
 .manage-from-mobile {
   grid-area: manage-from-mobile;
-  display: grid;
-  gap: 10px;
-  grid-template-areas:
-    "heading phones"
-    "get phones";
-  padding: inherit;
-  background-color: antiquewhite;
+  background-color: #1db5be;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  display: flex;
 }
-.manage-from-mobile .heading {
-  grid-area: heading;
+.manage-from-mobile h2 {
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -2.5%;
 }
-.get {
-  grid-area: get;
+.manage-from-mobile h4 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: normal;
+}
+.manage-from-mobile p {
+  font-size: 18px;
+  line-height: 28px;
 }
 .phones {
+  display: grid;
+  grid-template-areas:
+    "pm1 ."
+    "pm1 pm2"
+    ". pm2";
   grid-area: phones;
 }
+#pm1 {
+  grid-area: pm1;
+}
+#pm2 {
+  grid-area: pm2;
+  transform: translateY(17px);
+}
+.phones img {
+  max-width: 210px;
+}
+.info-block {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+#gp-ap {
+  display: flex;
+  gap: 13px;
+}
+#gp {
+  background: url("GooglePlaylogo.svg") no-repeat 10px;
+  border: solid #d1d5db 0.5px;
+  border-radius: 4px;
+  width: 140px;
+  height: 40px;
+  background-color: black;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 40px;
+}
+#as {
+  color: #ffffff;
+  background: url("AppStorelogo.svg") no-repeat 17px;
+  border-radius: 8px;
+  border: #d1d5db solid 0.5px;
+  width: 140px;
+  height: 40px;
+  text-align: left;
+  padding-left: 40px;
+  background-color: black;
+}
+.manage-from-mobile .get-the-app a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* FOOTER */
 footer {
   grid-area: footer;
   display: grid;
@@ -188,18 +457,73 @@ footer {
     "icon-square get"
     "links get"
     "copyright get";
-  padding: inherit;
-  background-color: antiquewhite;
+  background-color: black;
+  color: #ffffff;
+  gap: 10px;
 }
 .icon-square {
   grid-area: icon-square;
 }
 .links {
   grid-area: links;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+}
+.links .top {
+  display: flex;
+  gap: 20px;
+}
+.links .bottom {
+  display: flex;
+  gap: 20px;
+}
+.get h4 {
+  margin: 0px;
+  /* transform: translateX(-48px); */
+  color: #d1d5db;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: normal;
 }
 .get {
   grid-area: get;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
 }
 .copyright {
   grid-area: copyright;
+  color: #d1d5db;
+  font-size: 14px;
+  line-height: 20px;
+}
+#google-play {
+  background: url("GooglePlaylogo.svg") no-repeat 10px;
+  border: solid #d1d5db 0.5px;
+  border-radius: 4px;
+  width: 140px;
+  height: 40px;
+  background-color: black;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 40px;
+}
+#app-store {
+  background-color: black;
+  color: #ffffff;
+  background: url("AppStorelogo.svg") no-repeat 17px;
+  border-radius: 8px;
+  border: #d1d5db solid 0.5px;
+  width: 140px;
+  height: 40px;
+  text-align: left;
+  padding-left: 40px;
 }
